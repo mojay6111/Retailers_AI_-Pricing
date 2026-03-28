@@ -1,4 +1,4 @@
-const BASE = "http://localhost:8002";
+const BASE = "https://retailers-ai-pricing.onrender.com";
 
 export async function fetchHealth() {
   const r = await fetch(`${BASE}/health`);

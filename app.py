@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from datetime import datetime
 from pathlib import Path
 from src.api.schemas import HealthResponse
@@ -24,6 +25,7 @@ app.include_router(analytics.router)
 
 
 @app.get("/health", response_model=HealthResponse, tags=["system"])
+@app.head("/health")
 def health():
     processed = Path("data/processed")
     models    = Path("models")
@@ -36,11 +38,12 @@ def health():
 
 
 @app.get("/", tags=["system"])
+@app.head("/")
 def root():
     return {
-        "name"       : "Retailers AI Pricing API",
-        "version"    : "1.0.0",
-        "docs"       : "/docs",
-        "health"     : "/health",
-        "endpoints"  : ["/price", "/forecast", "/analytics"],
+        "name"     : "Retailers AI Pricing API",
+        "version"  : "1.0.0",
+        "docs"     : "/docs",
+        "health"   : "/health",
+        "endpoints": ["/price", "/forecast", "/analytics"],
     }
