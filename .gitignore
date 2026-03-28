@@ -13,13 +13,8 @@ __pycache__/
 .ipynb_checkpoints/
 notebooks/.ipynb_checkpoints/
 
-# Data — raw and processed stay local
+# Raw data stays local (too large)
 data/raw/
-data/processed/
-
-# Models — large binary files
-models/*.pkl
-models/*.joblib
 
 # Reports — generated output
 reports/

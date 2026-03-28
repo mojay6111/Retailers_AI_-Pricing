@@ -1,0 +1,42 @@
+{
+  "transactions": {
+    "total_rows": 396777,
+    "date_range": "Dec 2010 \u2014 Dec 2011",
+    "total_revenue": "\u00a38,744,950.52",
+    "unique_skus": 3665,
+    "unique_customers": 4337,
+    "countries": 37
+  },
+  "products": {
+    "total": 3665,
+    "avg_price": "\u00a33.58",
+    "median_price": "\u00a31.94",
+    "total_revenue": "\u00a38.7M"
+  },
+  "elasticity": {
+    "products_estimated": 1763,
+    "category_breakdown": {
+      "highly elastic": 1069,
+      "unusual": 335,
+      "elastic": 287,
+      "inelastic": 72
+    },
+    "high_confidence": 651,
+    "medium_confidence": 1069
+  },
+  "recommendations": {
+    "total_products": 1763,
+    "price_increases": 71,
+    "avg_increase_pct": 5.3,
+    "estimated_annual_uplift": "\u00a377.0k",
+    "action_breakdown": {
+      "hold \u2014 price sensitive": 815,
+      "hold \u2014 low confidence": 627,
+      "hold \u2014 elastic": 142,
+      "manual review": 99,
+      "increase price (rule-based)": 67,
+      "small increase \u2014 elastic": 9,
+      "increase price (medium confidence)": 4
+    }
+  }
+}
