@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environments
+.venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Data — raw and processed stay local
+data/raw/
+data/processed/
+
+# Models — large binary files
+models/*.pkl
+models/*.joblib
+
+# Reports — generated output
+reports/
+
+# Secrets
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# uv
+uv.lock
