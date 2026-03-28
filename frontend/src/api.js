@@ -1,4 +1,4 @@
-const BASE = "http://localhost:8001";
+const BASE = "http://localhost:8002";
 
 export async function fetchHealth() {
   const r = await fetch(`${BASE}/health`);
