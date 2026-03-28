@@ -2,10 +2,11 @@ import pandas as pd
 from fastapi import APIRouter, HTTPException
 from pathlib import Path
 from src.api.schemas import PriceRecommendation
+import os
 
 router = APIRouter(prefix="/price", tags=["pricing"])
 
-PROCESSED_PATH = Path(__file__).resolve().parents[3] / "data" / "processed"
+PROCESSED_PATH = Path(os.environ.get("APP_ROOT", Path(__file__).resolve().parents[3])) / "data" / "processed"
 
 _recs: pd.DataFrame = None
 

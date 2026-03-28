@@ -5,6 +5,13 @@ import json
 from pathlib import Path
 from datetime import datetime
 from typing import Optional
+import os
+
+# Use environment variable if set, otherwise resolve relative to this file
+_ROOT = Path(os.environ.get("APP_ROOT", Path(__file__).resolve().parents[2]))
+
+PROCESSED_PATH = _ROOT / "data" / "processed"
+MODELS_PATH    = _ROOT / "models"
 
 log = logging.getLogger(__name__)
 

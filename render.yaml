@@ -9,3 +9,5 @@ services:
         value: .
       - key: PYTHON_VERSION
         value: 3.11.15
+      - key: APP_ROOT
+        value: /opt/render/project/src
